@@ -36,10 +36,11 @@ function makeUrlClick(evt) {
 
     if (!evt.target.classList.contains(`gallery__image`)) {
         return;
-    }
+  }
+
     const image = evt.target.dataset.source;
     console.log(image);
     
-    const lightbox = new SimpleLightbox('.gallery a', { /* options */ });
-    
- }
+}
+ 
+const lightbox = new SimpleLightbox('.gallery a');
