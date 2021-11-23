@@ -25,7 +25,7 @@ form.addEventListener('input', throttle( evt => {
     
     localStorage.setItem(LOCALSTORAGE_KEY_FORM_DATA, JSON.stringify(formData));
  
-}, 2500))
+}, 500))
  
 function initForm() {
     if (localStorage.getItem(LOCALSTORAGE_KEY_FORM_DATA)) {
@@ -34,3 +34,5 @@ function initForm() {
         form.elements.message.value = pullAutForm.message;
     };
 };
+
+

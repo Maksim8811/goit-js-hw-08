@@ -21,7 +21,7 @@ function createElementsMarkup(galleryItems) {
     <img
       class="gallery__image"
       src="${preview}"
-      data-source="${original}"
+      title="${description}"
       alt="${description}"
     />
   </a>
@@ -40,7 +40,12 @@ function makeUrlClick(evt) {
 
     const image = evt.target.dataset.source;
     console.log(image);
+
+    
     
 }
  
-const lightbox = new SimpleLightbox('.gallery a');
+const lightbox = new SimpleLightbox('.gallery a', {
+        captionsData: "alt",
+        captionDelay: 250,
+    });
